@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KFCRI – Kovise Foundation Conflict Resolution International</title>
+  <link rel="icon" href="https://kfcri.org/images/favicon.ico" sizes="32x32">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Marcellus&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- KFCRI brand colour override -->
+  <style>
+    :root {
+          --primary: #2980cf;
+    --secondary: #002973;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== PAGE-LOAD PROGRESS BAR ===================== -->
+<div id="page-load-bar"></div>
+
+<!-- ===================== PRELOADER ===================== -->
+<div id="preloader">
+  <div class="preloader-ring"></div>
+</div>
+
+<!-- ===================== MOBILE HEADER ===================== -->
+<div class="header-mobilebar">
+  <button class="mobile-toggle" aria-label="Open menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div class="mobile-logo-wrap">
+    <a href="index.html">
+      <img src="./assets/logoPng.png" alt="KFCRI">
+    </a>
+  </div> 
+</div>
+
+<!-- Mobile overlay & panel -->
+<div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-panel">
+    <button class="mobile-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <nav class="mobile-nav">
+    <ul>
+    <!-- 01 -->
+    <li>
+    <a href="index.html">Home</a>
+    </li>
+
+    <!-- 02 -->
+    <li class="has-m-sub">
+    <a href="#about-us">About</a>
+    </li>
+
+    <!-- 03 -->
+    <li class="has-m-sub">
+    <a href="#practice-areas">Accreditation <i class="fa-solid fa-chevron-down"></i></a>
+    <ul class="m-sub">
+    <li><a href="#">Accreditation Procedure</a></li>
+    <!-- nested L2 -->
+    <li class="has-m-sub2">
+    <a href="#">Arbitration <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i></a>
+    <ul class="m-sub2">
+      <li><a href="#">Associate</a></li>
+      <li><a href="#">Affiliate</a></li>
+      <li><a href="#">Fellow</a></li>
+      <li><a href="#">Proficient</a></li>
+    </ul>
+    </li>
+    <li><a href="#">Conciliation</a></li>
+
+    <!-- nested L2 -->
+    <li class="has-m-sub2">
+    <a href="#">Mediation <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i></a>
+    <ul class="m-sub2">
+      <li><a href="#">Associate</a></li> 
+      <li><a href="#">Fellow</a></li> 
+    </ul>
+    </li>
+
+    <li><a href="#">Negotiation</a></li> 
+
+    <li><a href="#">Tribunal Secretary</a></li>
+    </ul>
+    </li>
+
+    <!-- 04 -->
+    <li class="has-m-sub">
+    <a href="#">Member <i class="fa-solid fa-chevron-down"></i></a>
+    <ul class="m-sub"> 
+    <li><a href="#">Advisory Board</a></li>
+    <li><a href="#">Core Committee</a></li>
+    <li><a href="#">Managing Committee</a></li>
+    <li><a href="#">Membership Directory</a></li>
+    </ul>
+    </li>
+
+    <!-- 05 -->
+    <li>
+    <a href="#">Rules</a>
+    </li>
+
+    <!-- 06 -->
+    <li>
+    <a href="#">Centre</a>
+      </li>
+
+      <!-- 07 -->
+      <li>
+      <a href="#">Updates</a>
+      </li>
+      <!-- 08 -->
+      <li>
+      <a href="#">Gallery</a>
+      </li>
+      <!-- 09 -->
+      <li>
+      <a href="#">Contact Us</a>
+      </li>
+
+        </nav>
+    </div>
+
+<!-- ===================== DESKTOP HEADER ===================== -->
+<header id="site-header">
+
+  <!-- Top Bar -->
+  <div class="header-topbar">
+    <div class="container-fluid">
+      <div class="topbar-inner">
+        <div>
+          <i class="bi bi-clock"></i>
+          <span style="color:#fff;">Mon – Sat: 9.00 am – 6.00 pm</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:28px;">
+          <a href="mailto:enquiry@kfcri.org">
+            <i class="fa-solid fa-envelope"></i> enquiry@kfcri.org
+          </a>
+
+           <a href="tel:+917358579597" class="h-phone">
+            <i class="fa-solid fa-phone"></i>+91 73585 79597
+          </a> 
+
+          <address class="mb-0">
+            <i class="fa-solid fa-location-dot"></i>Valasarawakkam, Chennai – 600 087
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav Bar -->
+  <div class="header-navbar" id="main-navbar">
+    <div class="container-fluid">
+      <div class="navbar-inner">
+
+        <!-- Logo -->
+         <div class="headerLogo">
+           <a href="index.html" style="flex-shrink:0;">
+             <!-- Light logo for dark/transparent header -->
+             <img src="./assets/logoPng.png" alt="KFCRI" class="site-logo"
+                  style="filter:brightness(0) invert(1);">
+             <!-- Dark logo for scrolled/sticky header -->
+             <img src="./assets/logoPng.png" alt="KFCRI" class="sticky-logo">
+           </a>
+
+           <!-- Primary Navigation -->
+        <nav aria-label="Primary navigation">
+          <ul class="primary-menu">
+
+            <li class="current-menu-item"><a href="index.html">Home</a></li>
+            <li><a href="#about-us">About</a></li>
+
+            <!-- Accreditation -->
+            <li class="has-flyout">
+              <a href="#practice-areas">Accreditation <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="sub-menu flyout-l1">
+                <li><a href="#">Accreditation Procedure</a></li>
+                <li class="has-flyout-l2">
+                  <a href="#">Arbitration <i class="fa-solid fa-chevron-right"></i></a>
+                  <ul class="flyout-l2">
+                    <li><a href="#">Associate</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                    <li><a href="#">Fellow</a></li>
+                    <li><a href="#">Proficient</a></li> 
+                  </ul>
+                </li>
+                <li><a href="#">Conciliation</a></li>
+                <li class="has-flyout-l2">
+                  <a href="#">Mediation <i class="fa-solid fa-chevron-right"></i></a>
+                  <ul class="flyout-l2">
+                    <li><a href="#">Associate</a></li> 
+                    <li><a href="#">Fellow</a></li> 
+                  </ul>
+                </li>
+                <li><a href="#">Negotiation</a></li>
+                <li><a href="#">Tribunal Secretary</a></li>
+              </ul>
+            </li>
+
+            <!-- Member -->
+            <li class="has-flyout">
+              <a href="#our-team">Member <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="sub-menu flyout-l1">
+                <li><a href="#">Advisory Board</a></li>
+                <li><a href="#">Core Committee</a></li>
+                <li><a href="#">Managing Committee</a></li>
+                <li><a href="#">Membership Directory</a></li> 
+              </ul>
+            </li> 
+
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Centre</a></li>
+            <li><a href="#blog">Updates</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+
+          </ul>
+        </nav>
+         </div>
+
+        <!-- Right side -->
+        <div style="display:flex;align-items:center;gap:20px;">
+          <a href="#contact" class="cea-button-link">
+            <span class="cea-button-icon"><i class="fa-solid fa-plus"></i></span>
+            <span>Register Now</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</header>
+ 
+
+
+<!-- =====================================================================
+     HERO SLIDER
+     ===================================================================== -->
+<section class="hero-slider" aria-label="Hero">
+
+  <!-- ── Slide 1 ─────────────────────────────────────── -->
+  <div class="slide">
+    <div class="slide-bg"
+      style="background-image:url('./assets/slider3.jpg');">
+    </div>
+    <div class="slide-overlay"></div>
+    <div class="slide-rock-shape"></div>
+    <div class="slide-watermark">ADR</div>
+
+    <div class="leftContent">
+      <div class="slide-deco-ring">
+        <div class="slide-deco-num">
+          <span class="big">2016</span>
+          <span class="label">Est.</span>
+        </div>
+      </div>
+      <div class="arrorDown">
+        <i class="fa-solid fa-arrow-down-long">&#x2193;</i>
+        <p>KFCRI</p>
+      </div>
+    </div>
+
+    <div class="slide-content">
+      <div class="slide-label"><span>Expert ADR Services</span></div>
+      <h1 class="slide-title"> 
+        <span class="line">Welcome to <span class="cus-stroke">KFCRI.</span></span>
+      </h1>
+      <p class="slide-text">
+        A Pioneer Institution promoting Alternative Dispute Resolution (ADR) — providing accreditation, dispute resolution infrastructure, and comprehensive capacity-building programmes.
+      </p>
+      <div class="slide-btn">
+        <a href="#about-us" class="cea-button-link">
+          <span class="cea-button-icon"><i class="fa-solid fa-plus"></i></span>
+          <span>Learn More</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Slide 2 ─────────────────────────────────────── -->
+  <div class="slide">
+    <div class="slide-bg"
+      style="background-image:url('./assets/slider2.jpg');">
+    </div>
+    <div class="slide-overlay"></div>
+    <div class="slide-rock-shape"></div>
+    <div class="slide-watermark">ADR</div>
+
+    <div class="leftContent">
+      <div class="slide-deco-ring">
+        <div class="slide-deco-num">
+          <span class="big">2016</span>
+          <span class="label">Est.</span>
+        </div>
+      </div>
+      <div class="arrorDown">
+        <i class="fa-solid fa-arrow-down-long">&#x2193;</i>
+        <p>KFCRI</p>
+      </div>
+    </div>
+
+    <div class="slide-content">
+      <div class="slide-label"><span>ADR Practice Accreditation</span></div>
+      <h1 class="slide-title">
+        <span class="line">Get <span class="cus-stroke">Accredited</span></span>
+      </h1>
+      <p class="slide-text">
+        KFCRI provides internationally recognised accreditation for competent professionals practising Arbitration, Mediation, Conciliation, and Negotiation across India and beyond.
+      </p>
+      <div class="slide-btn">
+        <a href="#contact" class="cea-button-link">
+          <span class="cea-button-icon"><i class="fa-solid fa-plus"></i></span>
+          <span>Register Today</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── Slide 3 ─────────────────────────────────────── -->
+  <div class="slide">
+    <div class="slide-bg"
+      style="background-image:url('./assets/slider1.jpg');">
+    </div>
+    <div class="slide-overlay"></div>
+    <div class="slide-rock-shape"></div>
+    <div class="slide-watermark">ADR</div>
+
+    <div class="leftContent">
+      <div class="slide-deco-ring">
+        <div class="slide-deco-num">
+          <span class="big">2016</span>
+          <span class="label">Est.</span>
+        </div>
+      </div>
+      <div class="arrorDown">
+        <i class="fa-solid fa-arrow-down-long">&#x2193;</i>
+        <p>KFCRI</p>
+      </div>
+    </div>
+
+    <div class="slide-content">
+      <div class="slide-label"><span>One-Stop ADR Institution</span></div>
+      <h1 class="slide-title">
+        <span class="line">One-Stop <span class="cus-stroke">Resolution</span></span>
+      </h1>
+      <p class="slide-text">
+        KFCRI empowers clients and practitioners to fully benefit from multiple ADR mechanisms — from arbitration and mediation to conciliation and negotiation — under one roof.
+      </p>
+      <div class="slide-btn">
+        <a href="#contact" class="cea-button-link">
+          <span class="cea-button-icon"><i class="fa-solid fa-plus"></i></span>
+          <span>Register Today</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dot navigation -->
+  <div class="slider-dots" role="tablist" aria-label="Slider navigation">
+    <button class="dot" role="tab" aria-label="Slide 1"></button>
+    <button class="dot" role="tab" aria-label="Slide 2"></button>
+    <button class="dot" role="tab" aria-label="Slide 3"></button>
+  </div>
+
+</section>
+
+
+<!-- =====================================================================
+     ABOUT SECTION
+     ===================================================================== -->
+<section class="about-section" id="about-us">
+  <div class="container">
+    <div class="row">
+
+      <!-- Image col -->
+      <div class="anim-fadeInLeft col-lg-6 col-md-6 col-sm-12 aboutParent">
+        <div class="aboutImg" style="background-image: url('./assets/aboutImg.jpg');">
+        </div>
+
+        <!-- Floating quote box -->
+        <div class="about-quote-box">
+          <i class="fa-solid fa-quote-right"></i>
+          <p>To promote the practice and usage of ADR mechanisms for a just and efficient resolution of disputes.</p>
+        </div>
+      </div>
+
+      <!-- Content col -->
+      <div class="about-content anim-fadeInRight col-lg-6 col-md-6 col-sm-12" data-delay="200">
+        <div class="section-title-wrapper">
+          <div class="sub-title">About KFCRI</div>
+          <h2 class="section-title">Kovise Foundation Conflict Resolution International</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <p>
+          KFCRI — Kovise Foundation Conflict Resolution International — is a first-of-its-kind institution in India established in 2016, dedicated to promoting Alternative Dispute Resolution (ADR) across all sectors of the economy. KFCRI serves as a comprehensive platform providing ADR Practice Accreditation, a fully functional Dispute Resolution Centre, capacity-building programmes, international seminars, webinars, and awareness initiatives to empower practitioners and clients alike.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=85"
+          alt="KFCRI ADR Professional Meeting"
+          style="width:100%;border-radius:0px;margin:20px 0;max-height:220px;object-fit:cover;">
+
+        <!-- Call Us box -->
+        <div class="call-us-box">
+          <div>
+            <div class="sub-title">Connect With Us</div>
+            <div class="cu-title">Discover the Uniqueness of KFCRI Accreditation</div>
+            
+            <a href="#contact" class="cea-button-link connectBtn">
+              <span class="cea-button-icon connect"><i class="fa-solid fa-envelope"></i></span>
+              <span>Register Today</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     STATS SECTION
+     ===================================================================== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="section-title-wrapper anim-fadeInUp" style="text-align:center;margin-bottom:60px;">
+      <div class="sub-title" style="justify-content:center;color:var(--primary);">Our Global Reach</div>
+      <h3 class="section-title" style="color: var(--secondary);">KFCRI — A One-Stop ADR Institution</h3>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-value"><span class="num" data-count="400">0</span><span class="suffix">+</span></div>
+        <div class="stat-label">Domestic Arbitration Cases Presided</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="num" data-count="15">0</span><span class="suffix">+</span></div>
+        <div class="stat-label">International Arbitration Cases Handled</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="num" data-count="100">0</span><span class="suffix">%</span></div>
+        <div class="stat-label">Commitment to ADR Standards &amp; Ethics</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="num" data-count="2016">0</span></div>
+        <div class="stat-label">Year of Establishment, Chennai, India</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="num" data-count="50">0</span><span class="suffix">+</span></div>
+        <div class="stat-label">Webinars, Seminars &amp; Training Programmes Conducted</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="num" data-count="4">0</span></div>
+        <div class="stat-label">Core ADR Disciplines: Arbitration, Conciliation, Mediation, Negotiation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     PRACTICE AREAS CAROUSEL — KFCRI ADR Services
+     ===================================================================== -->
+<section class="practice-section" id="practice-areas">
+  <div class="container">
+
+    <div class="svc-header anim-fadeInUp">
+      <div class="svc-header-left">
+        <div class="sub-title" style="color:var(--primary);">What We Do</div>
+        <h2 class="section-title" style="color:var(--heading);margin:0;">A Passion For Justice,<br>Our ADR Services</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="svc-header-right anim-zoomIn" data-delay="200">
+        <a href="#contact" class="cea-button-link">
+          <span class="cea-button-icon"><i class="fa-solid fa-plus"></i></span>
+          <span>Register Today</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Carousel viewport -->
+    <div class="svc-carousel-wrap">
+      <div class="svc-track" id="svcTrack">
+
+        <!-- Card 1: Arbitration -->
+        <div class="svc-card">
+          <div class="svc-card-top">
+            <div class="svc-icon-wrap">
+              <img src="https://kfcri.org/images/service-icon-1.png"
+                onerror="this.src='https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2022/07/copyright.png'"
+                alt="Arbitration" class="svc-icon">
+            </div>
+            <h4 class="svc-title"><a href="#">Arbitration</a></h4>
+            <p class="svc-desc">A formal procedure in which a dispute arising out of an agreement between parties is submitted before one or more arbitrators, who render a binding and enforceable award.</p>
+          </div>
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&q=80" alt="Arbitration">
+          </div>
+        </div>
+
+        <!-- Card 2: Conciliation -->
+        <div class="svc-card">
+          <div class="svc-card-top">
+            <div class="svc-icon-wrap">
+              <img src="https://kfcri.org/images/service-icon-2.png"
+                onerror="this.src='https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2022/07/divorce-1.png'"
+                alt="Conciliation" class="svc-icon">
+            </div>
+            <h4 class="svc-title"><a href="#">Conciliation</a></h4>
+            <p class="svc-desc">A procedure in which parties to a dispute approach one or more conciliators who actively assist in proposing and facilitating an agreed settlement between them.</p>
+          </div>
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1521791055366-0d553872952f?w=700&q=80" alt="Conciliation">
+          </div>
+        </div>
+
+        <!-- Card 3: Mediation -->
+        <div class="svc-card">
+          <div class="svc-card-top">
+            <div class="svc-icon-wrap">
+              <img src="https://kfcri.org/images/service-icon-3.png"
+                onerror="this.src='https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2022/07/business-1.png'"
+                alt="Mediation" class="svc-icon">
+            </div>
+            <h4 class="svc-title"><a href="#">Mediation</a></h4>
+            <p class="svc-desc">A voluntary procedure in which parties to a dispute approach one or more mediators who guide the parties toward an amicable, mutually agreeable settlement.</p>
+          </div>
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80" alt="Mediation">
+          </div>
+        </div>
+
+        <!-- Card 4: Negotiation -->
+        <div class="svc-card">
+          <div class="svc-card-top">
+            <div class="svc-icon-wrap">
+              <img src="https://kfcri.org/images/service-icon-4.png"
+                onerror="this.src='https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2022/07/news-1-1.png'"
+                alt="Negotiation" class="svc-icon">
+            </div>
+            <h4 class="svc-title"><a href="#">Negotiation</a></h4>
+            <p class="svc-desc">An integral and foundational part of every dispute resolution process — negotiation is an informal yet structured discipline with its own intricate models and strategies.</p>
+          </div>
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=700&q=80" alt="Negotiation">
+          </div>
+        </div>
+
+        <!-- Card 5: Infrastructure -->
+        <div class="svc-card">
+          <div class="svc-card-top">
+            <div class="svc-icon-wrap">
+              <img src="https://kfcri.org/images/service-icon-5.png"
+                onerror="this.src='https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2022/07/protest-1-1.png'"
+                alt="Infrastructure" class="svc-icon">
+            </div>
+            <h4 class="svc-title"><a href="#">Dispute Resolution Centre</a></h4>
+            <p class="svc-desc">KFCRI operates a fully functional Dispute Resolution Centre with state-of-the-art hearing rooms, administrative support, and online facilities for ADR proceedings.</p>
+          </div>
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="KFCRI Dispute Resolution Centre">
+          </div>
+        </div>
+
+        <!-- Card 6: Rules & Regulations -->
+        <div class="svc-card">
+          <div class="svc-card-top">
+            <div class="svc-icon-wrap">
+              <img src="https://kfcri.org/images/service-icon-6.png"
+                onerror="this.src='https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2022/07/business-1.png'"
+                alt="Rules" class="svc-icon">
+            </div>
+            <h4 class="svc-title"><a href="#">Rules &amp; Regulations</a></h4>
+            <p class="svc-desc">KFCRI administers its own progressive and internationally aligned rules for Arbitration, Mediation, Conciliation, and Negotiation proceedings.</p>
+          </div>
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=700&q=80" alt="KFCRI ADR Rules">
+          </div>
+        </div>
+
+      </div><!-- #svcTrack -->
+    </div>
+
+    <!-- Prev / Next arrows -->
+    <div class="svc-nav">
+      <button class="svc-btn svc-prev" id="svcPrev" aria-label="Previous">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="svc-btn svc-next" id="svcNext" aria-label="Next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     TESTIMONIALS
+     ===================================================================== -->
+<section class="testi-section" id="testimonials">
+  <div class="testi-statue-bg"></div>
+  <div class="container">
+
+    <div class="testi-header anim-fadeInUp" style="text-align:center;margin-bottom:56px;">
+      <div class="sub-title" style="justify-content:center;">What Members Say</div>
+      <h2 class="section-title">What They Are Saying About KFCRI</h2>
+      <div class="section-divider center-div"></div>
+    </div>
+
+    <div class="testi-carousel-new">
+
+      <div class="testi-item-new active">
+        <div class="testi-avatar-wrap">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80" alt="Suvethan G.S.">
+        </div>
+        <div class="testi-body-new">
+          <p class="testi-quote-new">"The entire ADR accreditation programme at KFCRI — from the rigorous training to the final assessment — was immensely thorough and professional. Their commitment to promoting ADR culture is commendable and truly world-class."</p>
+          <div class="testi-author-name">Suvethan G.S.</div>
+          <div class="testi-author-role">Accredited ADR Practitioner – KFCRI</div>
+          <div class="testi-deco66">&#8221;&#8221;</div>
+        </div>
+      </div>
+
+      <div class="testi-item-new">
+        <div class="testi-avatar-wrap">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80" alt="Shanmuga Dev">
+        </div>
+        <div class="testi-body-new">
+          <p class="testi-quote-new">"KFCRI's structured approach to Alternative Dispute Resolution has given me a clear edge in international dispute settlement. The institution's panel of advisors and its global outreach truly sets it apart from any other ADR body in India."</p>
+          <div class="testi-author-name">Shanmuga Dev</div>
+          <div class="testi-author-role">ADR &amp; Law Practice, Managing Committee – KFCRI</div>
+          <div class="testi-deco66">&#8221;&#8221;</div>
+        </div>
+      </div>
+
+      <div class="testi-item-new">
+        <div class="testi-avatar-wrap">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" alt="Sri Nikila M.">
+        </div>
+        <div class="testi-body-new">
+          <p class="testi-quote-new">"KFCRI is a first-of-its-kind institution in India providing comprehensive ADR Practice Accreditation. Their capacity-building programmes and international seminars have been exceptional for developing the next generation of ADR professionals."</p>
+          <div class="testi-author-name">Sri Nikila M.</div>
+          <div class="testi-author-role">School of Excellence in Law, Managing Committee – KFCRI</div>
+          <div class="testi-deco66">&#8221;&#8221;</div>
+        </div>
+      </div>
+
+    </div><!-- .testi-carousel-new -->
+
+    <div class="testi-pill-dots">
+      <button class="tpill active" data-ti="0"></button>
+      <button class="tpill" data-ti="1"></button>
+      <button class="tpill" data-ti="2"></button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     CTA BANNER
+     ===================================================================== -->
+<section class="cta-banner-section">
+  <div class="cta-banner-box anim-fadeInUp">
+    <!-- Brown triangle wedge left -->
+    <div class="cta-banner-wedge"></div>
+    <!-- Left text -->
+    <div class="cta-banner-content">
+      <div class="sub-title" style="color:rgba(196,168,130,.9);">ADR Accreditation</div>
+      <h2 class="cta-banner-title">Register Today — Be Recognised &amp; Accredited in ADR Practice</h2>
+      <div class="cta-banner-stars">
+        <span class="cta-star-icons">★★★★★</span>
+        <span class="cta-star-text">Trusted by 1,200+ ADR Practitioners &amp; Members Worldwide</span>
+      </div>
+    </div>
+    <!-- Right image with diagonal skew cut -->
+    <div class="cta-banner-img">
+      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=900&q=80"
+        alt="KFCRI ADR Professional">
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     TEAM — Managing Committee
+     ===================================================================== -->
+<section class="team-arch-section" id="our-team">
+  <div class="container">
+
+    <div class="section-title-wrapper anim-fadeInUp" style="text-align:center;margin-bottom:56px;">
+      <div class="sub-title" style="justify-content:center;">Our People</div>
+      <h2 class="section-title" style="color:var(--heading);">Managing Committee —<br>The Cornerstones of KFCRI</h2>
+      <div class="section-divider center-div"></div>
+    </div>
+
+    <div class="arch-viewport">
+      <div class="arch-track" id="archTrack">
+
+        <div class="arch-card anim-fadeInUp" data-delay="100">
+          <div class="arch-name">V. Inbavijayan</div>
+          <div class="arch-role">Project Advisor &amp; Global ADR Expert, FCIArb (UK)</div>
+          <div class="arch-portrait">
+            <img src="https://kfcri.org/images/team/inbavijayan.jpg"
+              onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80'"
+              alt="V. Inbavijayan">
+          </div>
+          <div class="arch-socials">
+            <a href="https://www.linkedin.com/in/inbavijayan/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="arch-card anim-fadeInUp" data-delay="200">
+          <div class="arch-name">Surya Narmada</div>
+          <div class="arch-role">Founder, Kovise Foundation &amp; Managing Committee</div>
+          <div class="arch-portrait">
+            <img src="https://kfcri.org/images/team/suryanarmada.jpg"
+              onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80'"
+              alt="Surya Narmada">
+          </div>
+          <div class="arch-socials">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="arch-card anim-fadeInUp" data-delay="300">
+          <div class="arch-name">Pranav Inbavijayan</div>
+          <div class="arch-role">International Dispute Settlement, Managing Committee</div>
+          <div class="arch-portrait">
+            <img src="https://kfcri.org/images/team/pranav.jpg"
+              onerror="this.src='https://images.unsplash.com/photo-1531727991582-cfd25ce79613?w=300&q=80'"
+              alt="Pranav Inbavijayan">
+          </div>
+          <div class="arch-socials">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="arch-card anim-fadeInUp" data-delay="100">
+          <div class="arch-name">Shanmuga Dev</div>
+          <div class="arch-role">ADR &amp; Law Practice, Managing Committee</div>
+          <div class="arch-portrait">
+            <img src="https://kfcri.org/images/team/shanmugadev.jpg"
+              onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80'"
+              alt="Shanmuga Dev">
+          </div>
+          <div class="arch-socials">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="tel:+917358579597"><i class="bi bi-telephone"></i></a>
+          </div>
+        </div>
+
+        <div class="arch-card anim-fadeInUp" data-delay="200">
+          <div class="arch-name">Sri Nikila M.</div>
+          <div class="arch-role">School of Excellence in Law, Managing Committee</div>
+          <div class="arch-portrait">
+            <img src="https://kfcri.org/images/team/srinikila.jpg"
+              onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80'"
+              alt="Sri Nikila M.">
+          </div>
+          <div class="arch-socials">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="tel:+919865851999"><i class="bi bi-telephone"></i></a>
+          </div>
+        </div>
+
+        <div class="arch-card anim-fadeInUp" data-delay="300">
+          <div class="arch-name">Sharukumar S.I.</div>
+          <div class="arch-role">Law &amp; ADR Practice, Managing Committee</div>
+          <div class="arch-portrait">
+            <img src="https://kfcri.org/images/team/sharukumar.jpg"
+              onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80'"
+              alt="Sharukumar S.I.">
+          </div>
+          <div class="arch-socials">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="tel:+919003184869"><i class="bi bi-telephone"></i></a>
+          </div>
+        </div>
+
+      </div><!-- #archTrack -->
+    </div>
+
+    <div class="arch-dots" id="archDots">
+      <button class="arch-dot active" data-pg="0"></button>
+      <button class="arch-dot" data-pg="1"></button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     FOOTER CTA STRIP
+     ===================================================================== -->
+<section class="ftop-cta-section" id="contact">
+  <div class="ftop-wedge"></div>
+  <div class="container">
+    <div class="ftop-inner">
+      <div class="ftop-text anim-fadeInLeft">
+        <div class="ftop-label">
+          <span class="ftop-deco"></span>Get In Touch<span class="ftop-deco"></span>
+        </div>
+        <h2 class="ftop-heading">Let's Get Started With KFCRI —<br>Further Information &amp; Expert ADR Support</h2>
+      </div>
+      <a href="tel:+917358579597" class="ftop-pill anim-fadeInRight" data-delay="200">
+        <span class="ftop-pill-num">+91 73585 79597</span>
+        <span class="ftop-pill-lbl">Feel Free to Call Us</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     NEWS & EVENTS — KFCRI Webinars, Seminars, Competitions
+     ===================================================================== -->
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="section-title-wrapper anim-fadeInUp" style="text-align:center;margin-bottom:50px;">
+      <div class="sub-title" style="justify-content:center;">Recent Events</div>
+      <h2 class="section-title">KFCRI News, Webinars &amp; ADR Competitions</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="blog-grid">
+
+      <div class="blog-card">
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&q=80"
+            alt="KFCRI Webinar Med-Arb">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <div class="blog-cat"><a href="#">Webinar</a>, <a href="#">Arbitration</a></div>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> June 9, 2020</div>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">International Seminar on Emerging Trends in Med-Arb</a>
+          </h3>
+          <a href="#" class="read-more">Learn More</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80"
+            alt="Force Majeure Webinar">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <div class="blog-cat"><a href="#">Webinar</a>, <a href="#">Contracts</a></div>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> June 10, 2020</div>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">COVID-19 &amp; Lockdown — Force Majeure and Frustration in Construction Contracts</a>
+          </h3>
+          <a href="#" class="read-more">Learn More</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+            alt="National Mediation Competition">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <div class="blog-cat"><a href="#">Competition</a>, <a href="#">Mediation</a></div>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> September 10–12, 2020</div>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">1st Virtual National Mediation Competition — Awareness in Dispute Resolution</a>
+          </h3>
+          <a href="#" class="read-more">Learn More</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=800&q=80"
+            alt="International Arbitration Conference">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <div class="blog-cat"><a href="#">Conference</a>, <a href="#">International</a></div>
+            <div class="blog-date"><i class="bi bi-calendar3"></i> July 30, 2021</div>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">International Conference on Contemporary Issues in Arbitration — Andaman Law College &amp; KFCRI</a>
+          </h3>
+          <a href="#" class="read-more">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<footer id="site-footer">
+
+  <!-- Widget area -->
+  <div class="footer-widgets-wrap">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3">
+          <h5>Our Address</h5>
+          <address>
+            G-2, Plot No. 108, Majestic Colony,<br>
+            Valasarawakkam, Chennai – 600 087,<br>
+            Tamil Nadu, India.
+          </address>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Connect with Us</h5>
+          <div style="line-height:32px;">
+            <a href="mailto:enquiry@kfcri.org" style="display:block;">
+              <i class="bi bi-envelope" style="color:var(--primary);margin-right:6px;"></i>enquiry@kfcri.org
+            </a>
+            <a href="tel:+917358579597" style="display:block;">
+              <i class="bi bi-telephone" style="color:var(--primary);margin-right:6px;"></i>+91 73585 79597 (Shanmuga Dev)
+            </a>
+            <a href="tel:+919042343543" style="display:block;">
+              <i class="bi bi-telephone" style="color:var(--primary);margin-right:6px;"></i>+91 90423 43543 (Suvethan G.S.)
+            </a>
+            <a href="tel:+919003184869" style="display:block;">
+              <i class="bi bi-telephone" style="color:var(--primary);margin-right:6px;"></i>+91 90031 84869 (Sharukumar S.I.)
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul class="footer-menu">
+            <li><a href="#about-us">About KFCRI</a></li>
+            <li><a href="#practice-areas">ADR Services &amp; Accreditation</a></li>
+            <li><a href="#our-team">Managing Committee</a></li>
+            <li><a href="#blog">News &amp; Events</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Stay Updated</h5>
+          <p style="font-size:14px;margin-bottom:14px;">Subscribe for the latest KFCRI news, ADR webinars, seminars &amp; upcoming events.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email Address" required>
+            <button type="submit" class="btn">
+              <i class="bi bi-send" style="margin-right:6px;"></i>Subscribe
+            </button>
+            <div class="form-msg" style="margin-top:10px;font-size:13px;"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom-wrap">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">
+          &copy; Copyright 2026. All rights reserved.
+          <a href="https://kfcri.org/" target="_blank" rel="noopener">KFCRI</a> —
+          Kovise Foundation Conflict Resolution International, Chennai, India.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/kfcriorg/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/inbavijayan/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="mailto:enquiry@kfcri.org" aria-label="Email KFCRI"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer><!-- #site-footer -->
+
+
+<!-- Back to top -->
+<button class="back-to-top" aria-label="Back to top">
+  <i class="bi bi-caret-up-fill"></i>
+</button>
+
+<!-- Scripts -->
+<script src="scripts.js"></script>
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+
+</body>
+</html>
