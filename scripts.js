@@ -502,23 +502,7 @@ svcTrack.style.cursor = 'grab';
     setTimeout(function () { svcTrack.style.transition = ''; }, 50);
   }
 
-  /* ============================================
-     NEWSLETTER FORM
-     ============================================ */
-  var newsletterForm = document.querySelector('.newsletter-form');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var input = newsletterForm.querySelector('input[type="email"]');
-      var msg   = newsletterForm.querySelector('.form-msg');
-      if (input && input.value && msg) {
-        msg.textContent = '✓ You are subscribed now!';
-        msg.style.color = '#b8967e';
-        input.value = '';
-        setTimeout(function () { msg.textContent = ''; }, 4500);
-      }
-    });
-  }
+ 
 
   /* ============================================
      SMOOTH SCROLL for anchor links
@@ -577,92 +561,16 @@ svcTrack.style.cursor = 'grab';
 
     newRevealEls.forEach(function (el) { newObs.observe(el); });
   }
+ 
+    
 
-  /* ============================================
-     HEADER nav link hover — force underline on
-     current-menu-item for scrolled state too
-     ============================================ */
-  var currentItems = document.querySelectorAll('.primary-menu .current-menu-item > a');
-  currentItems.forEach(function (a) {
-    a.style.color = 'var(--primary)';
-  });
-
-  /* ============================================
-     NEW TESTIMONIAL CAROUSEL (.testi-item-new)
-     pill-dot nav, auto-cycle 5.5s
-     ============================================ */
-  var tnItems  = document.querySelectorAll('.testi-item-new');
-  var tnPills  = document.querySelectorAll('.tpill');
-  var tnCur    = 0;
-  var tnTimer;
-
-  function showTN(idx) {
-    tnItems[tnCur].classList.remove('active');
-    tnPills[tnCur] && tnPills[tnCur].classList.remove('active');
-    tnCur = ((idx % tnItems.length) + tnItems.length) % tnItems.length;
-    tnItems[tnCur].classList.add('active');
-    tnPills[tnCur] && tnPills[tnCur].classList.add('active');
-  }
-  function startTN() {
-    clearInterval(tnTimer);
-    tnTimer = setInterval(function () { showTN(tnCur + 1); }, 5500);
-  }
-  if (tnItems.length) {
-    tnPills.forEach(function (p, i) {
-      p.addEventListener('click', function () { showTN(i); startTN(); });
-    });
-    startTN();
-  }
-
-  /* ============================================
-     ARCH TEAM CAROUSEL (#archTrack)
-     3-up, page-based, pill-dot nav, touch swipe
-     ============================================ */
-  var archTrack = document.getElementById('archTrack');
-  var archDots  = document.querySelectorAll('.arch-dot');
-
-  if (archTrack) {
-    var archCards  = archTrack.querySelectorAll('.arch-card');
-    var archTotal  = archCards.length;
-    var archPerPg  = 3;
-    var archPage   = 0;
-    var archGap    = 26;
-
-    function archCardW() {
-      return archCards[0] ? archCards[0].getBoundingClientRect().width : 0;
-    }
-    function goArch(pg) {
-      var maxPg = Math.ceil(archTotal / archPerPg) - 1;
-      pg = Math.max(0, Math.min(pg, maxPg));
-      var offset = pg * archPerPg * (archCardW() + archGap);
-      archTrack.style.transform = 'translateX(-' + offset + 'px)';
-      archTrack.style.transition = 'transform .55s cubic-bezier(.25,.46,.45,.94)';
-      archDots.forEach(function (d, i) { d.classList.toggle('active', i === pg); });
-      archPage = pg;
-    }
-    archDots.forEach(function (d, i) {
-      d.addEventListener('click', function () { goArch(i); });
-    });
-    /* touch */
-    var atx = 0;
-    archTrack.addEventListener('touchstart', function (e) { atx = e.touches[0].clientX; }, { passive: true });
-    archTrack.addEventListener('touchend', function (e) {
-      var diff = atx - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) goArch(diff > 0 ? archPage + 1 : archPage - 1);
-    }, { passive: true });
-    /* resize */
-    window.addEventListener('resize', function () {
-      var vw = window.innerWidth;
-      archPerPg = vw <= 600 ? 1 : vw <= 1024 ? 2 : 3;
-      goArch(0);
-    });
-  }
+ 
 
 })();
 
 
 $(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
+  $('.adrPractise').owlCarousel({
     loop            : true,
     margin          : 25,
     nav             : true,
@@ -694,4 +602,75 @@ $(document).ready(function () {
       }
     }
   });
+  $('.testiCarousel').owlCarousel({
+    loop            : true,
+    margin          : 25,
+    nav             : false,
+    dots            : false,
+    autoplay        : false,
+    autoplayTimeout : 4500,
+    smartSpeed      : 1000,
+    items           : 3,
+    responsive      : {
+      0: {
+        items  : 1,
+        margin : 10
+      },
+      576: {
+        items  : 2,
+        margin : 15
+      },
+      768: {
+        items  : 1,
+        margin : 15
+      },
+      992: {
+        items  : 1,
+        margin : 20
+      },
+      1200: {
+        items  : 1,
+        margin : 25
+      }
+    }
+  });
+  $('.newsSlider').owlCarousel({
+    loop            : true,
+    margin          : 25,
+    nav             : false,
+    dots            : true,
+    autoplay        : false,
+    autoplayTimeout : 4500,
+    smartSpeed      : 1000,
+    items           : 2,
+    responsive      : {
+      0: {
+        items  : 1,
+        margin : 10
+      },
+      576: {
+        items  : 2,
+        margin : 15
+      },
+      768: {
+        items  : 1,
+        margin : 15
+      },
+      992: {
+        items  : 1,
+        margin : 20
+      },
+      1200: {
+        items  : 2,
+        margin : 25
+      }
+    }
+  });
 });
+
+  // var copy = document.querySelector(".BrandingLogosSlisde").cloneNode(true);
+  //     document.querySelector(".BrandingLogos").appendChild(copy);
+
+
+
+  

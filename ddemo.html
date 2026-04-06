@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Left-to-Right Wave Slider</title>
+    <style>
+        /* --- Part 1: CSS (The Styles) --- */
+
+        /* Basic Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars during transition */
+        }
+
+        /* Slider Container */
+        .slider-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden; /* Crucial for clipping the wave */
+        }
+
+        /* Slider Wrapper */
+        .slider-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Individual Slide Base Styles */
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* The 'mask-image' is where the magic happens. We create a mask that is 
+               black (opaque, 100%) for most of the image, then transition to a soft edge.
+               The mask is linear (goes from left to right).
+               This setup creates a sharp right edge, then a soft transition of black to clear. */
+            -webkit-mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
+            mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
+            
+            /* We make the mask much wider than the image (200%).
+               This gives us a large opaque area and a large transparent area that 
+               we can move across the screen. */
+            -webkit-mask-size: 200% 100%;
+            mask-size: 200% 100%;
+
+            /* This is the base state (the starting position for the 'active' slide).
+               The mask is fully visible on the left, so the entire image is visible. */
+            -webkit-mask-position: 0% 0;
+            mask-position: 0% 0;
+
+            /* Set the transition. We only animate the mask position.
+               We use 'cubic-bezier(0.77, 0, 0.175, 1)' which is slow-fast-slow, 
+               ideal for a fluid wave motion. This is the transition speed of the wave sweep. */
+            transition: all 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+            z-index: 1; /* Lowest priority */
+        }
+
+        /* The 'active' class defines the visible, stationary state of a slide. */
+        .slide.active {
+            z-index: 2; /* Bring the current image to the middle layer */
+            -webkit-mask-position: 0% 0;
+            mask-position: 0% 0;
+        }
+
+        /* The 'next' class defines the starting state for the *incoming* slide.
+           The mask position is pushed off-screen to the left (100%), 
+           making the image fully transparent. */
+        .slide.next {
+            z-index: 3; /* The incoming image must be on top of the old one */
+            -webkit-mask-position: 100% 0; /* Move the mask fully left */
+            mask-position: 100% 0;
+        }
+
+        /* The 'active_out' class defines the transition out of the old slide. 
+           We can animate the old slide scale down while the new one sweeps in 
+           for a more dramatic effect. */
+        .slide.active_out {
+            z-index: 1; /* Send it to the back */
+            opacity: 0.5; /* Optional: Slight fade while the new one appears */
+            transform: scale(1.1); /* Optional: Slight zoom out smoothly */
+            -webkit-mask-position: 0% 0;
+            mask-position: 0% 0;
+        }
+
+        /* Overlay text for clarity */
+        .slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4; /* On top of everything */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: sans-serif;
+            pointer-events: none; /* Make overlay click-through */
+        }
+
+        .overlay-content h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        
+        <div class="slider-overlay">
+            <div class="overlay-content">
+                <h1>Wave Sweep</h1>
+            </div>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=2070');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070');"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slide");
+            let currentSlideIndex = 0;
+            const transitionInterval = 3000; // Time in ms before next slide (6 seconds)
+            let isTransitioning = false; // Flag to prevent rapid clicks/triggers
+
+            // Helper function to remove all active/transition classes
+            function clearClasses() {
+                slides.forEach(slide => {
+                    slide.classList.remove('active', 'next', 'active_out');
+                });
+            }
+
+            // Function to advance the slider automatically
+            function nextSlide() {
+                if (isTransitioning) return; // Prevent double trigger
+                isTransitioning = true; // Set flag to true
+
+                const currentSlide = slides[currentSlideIndex];
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Advance index (and loop)
+                const newSlide = slides[currentSlideIndex];
+
+                // --- Transition Sequence ---
+
+                // 1. Prepare the NEW slide to enter: give it 'next' state (mask pushed off-screen left).
+                newSlide.classList.add('next');
+
+                // 2. Force a reflow. Crucial for the browser to register the initial 'next' state.
+                void newSlide.offsetWidth; 
+
+                // 3. Mark the OLD slide to transition out (it will fade/zoom smoothly due to CSS).
+                currentSlide.classList.remove('active');
+                currentSlide.classList.add('active_out');
+
+                // 4. Activate the NEW slide. This triggers the transition of the mask position
+                //    from its starting 'next' position (100% off-screen left) back to its final 
+                //    'active' position (0% fully visible).
+                //    This creates the visual 'wave sweep' that reveals the image from left to right.
+                newSlide.classList.add('active');
+                newSlide.classList.remove('next');
+
+                // 5. Clean up after the transition completes.
+                //    Must match the CSS transition duration (1.2s / 1200ms).
+                setTimeout(() => {
+                    clearClasses(); // Remove leftover classes
+                    newSlide.classList.add('active'); // Re-establish clean 'active' state
+                    isTransitioning = false; // Transition is complete, reset the flag.
+                }, 5000); // Wait for the transition time (must match CSS)
+            }
+
+            // Initialization: The first slide is set with 'active' class in HTML, but we set the timer.
+            setInterval(nextSlide, transitionInterval);
+        });
+    </script>
+</body>
+</html>
