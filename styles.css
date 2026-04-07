@@ -192,8 +192,7 @@ p { margin-bottom:1rem; }
 [class*="col-"]  { padding:0 15px; }
 .col-12   { width:100%; }
 .col-md-3 { width:25%; }
-.col-md-4 { width:33.333%; }
-.col-md-6 { width:50%; }
+.col-md-4 { width:33.333%; } 
 .col-md-12{ width:100%; }
 
 /* =============================================
@@ -823,6 +822,7 @@ right: 0;
     box-shadow: 0 12px 40px rgba(0, 0, 0, .12);
     margin: -92px auto 0px auto;
     padding: 35px 35px 38px 35px;
+    justify-content: center;
 }
 .call-us-box:hover { background:rgb(255, 255, 255); transform:translateX(4px); }
 .call-us-box .cu-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--primary); font-weight:700; }
