@@ -1,3 +1,72 @@
+function loadHTML(id, file) {
+  fetch(file)
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById(id).innerHTML = data;
+
+      initHeaderFeatures(); // sticky + back to top
+      setActiveMenu();      // active menu
+    });
+}
+
+/* ============================================
+   STICKY HEADER + BACK TO TOP
+   ============================================ */
+function initHeaderFeatures() {
+  const navbar = document.getElementById('main-navbar');
+  const btt = document.querySelector('.back-to-top');
+
+  function onScroll() {
+    const y = window.scrollY;
+
+    navbar?.classList.toggle('scrolled', y > 80);
+    btt?.classList.toggle('visible', y > 300);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  btt?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ============================================
+   ACTIVE MENU (current-menu-item)
+   ============================================ */
+let menuInitialized = false;
+
+function setActiveMenu() {
+  if (menuInitialized) return; // 🛑 stop duplicate runs
+  menuInitialized = true;
+
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  const menuItems = document.querySelectorAll('#main-navbar li');
+
+  menuItems.forEach(li => li.classList.remove("current-menu-item"));
+
+  menuItems.forEach(li => {
+    const link = li.querySelector("a");
+    if (!link) return;
+
+    let href = link.getAttribute("href").replace("./", "");
+
+    if (href === currentPath) {
+      li.classList.add("current-menu-item");
+    }
+  });
+}
+
+/* ============================================
+   LOAD HEADER
+   ============================================ */
+loadHTML("headerParent", "header.html");
+loadHTML("footer", "footer.html");
+
+
+
+
+
 /* =============================================
    IGUAL – Law Firm & Attorney
    Full Consolidated JavaScript
@@ -57,6 +126,7 @@
       btt.classList.toggle('visible', y > 300);
     }
   }
+
   window.addEventListener('scroll', onScroll, { passive: true });
 
   /* ============================================
@@ -77,48 +147,48 @@
   var dots         = document.querySelectorAll('.slider-dots .dot');
   var currentSlide = 0;
   var sliderTimer;
-  const slider = document.querySelector('.hero-slider');
+ const slider = document.querySelector('.hero-slider');
 
+if (slider) {
   let isDragging = false;
-let startX = 0;
-let endX = 0;
-let threshold = 100;
+  let startX = 0;
+  let endX = 0;
+  let threshold = 100;
 
-// --- Mouse Events ---
-slider.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.clientX;
-  endX = startX; // reset
-});
+  slider.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    endX = startX;
+  });
 
-slider.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  endX = e.clientX;
-});
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    endX = e.clientX;
+  });
 
-slider.addEventListener('mouseup', () => {
-  if (!isDragging) return;
-  handleSwipe();
-  isDragging = false;
-});
+  slider.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    handleSwipe();
+    isDragging = false;
+  });
 
-slider.addEventListener('mouseleave', () => {
-  isDragging = false;
-});
+  slider.addEventListener('mouseleave', () => {
+    isDragging = false;
+  });
 
-// --- Touch Events ---
-slider.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-  endX = startX; // reset
-});
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    endX = startX;
+  });
 
-slider.addEventListener('touchmove', (e) => {
-  endX = e.touches[0].clientX;
-});
+  slider.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
 
-slider.addEventListener('touchend', () => {
-  handleSwipe();
-});
+  slider.addEventListener('touchend', () => {
+    handleSwipe();
+  });
+}
 
 function handleSwipe() {
   let diff = startX - endX;
@@ -134,10 +204,8 @@ function handleSwipe() {
   startAutoSlide();
 }
 
-  function resetSlideText(slide) {
-    // Reset all animated children so they re-trigger next time
-    slide.querySelectorAll('.slide-label span, .slide-title .line, .slide-text, .slide-btn, .slide-deco-ring, .slide-deco-num, .arrorDown').forEach(function (el) {
-      // forcing reflow so CSS transitions restart
+  function resetSlideText(slide) { 
+    slide.querySelectorAll('.slide-label span, .slide-title .line, .slide-text, .slide-btn, .slide-deco-ring, .slide-deco-num, .arrorDown').forEach(function (el) { 
       void el.offsetWidth;
     });
   }
@@ -667,6 +735,30 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
+// Service Accordion
+
+  function toggleService(id) {
+    const card = document.getElementById(id);
+    const isActive = card.classList.contains('active');
+ 
+    // Close all
+    document.querySelectorAll('.service-card').forEach(c => {
+      c.classList.remove('active');
+      const icon = c.querySelector('.service-toggle i');
+      if (icon) { icon.className = 'fas fa-chevron-down'; }
+    });
+ 
+    // Open clicked if it wasn't already open
+    if (!isActive) {
+      card.classList.add('active');
+      const icon = card.querySelector('.service-toggle i');
+      if (icon) { icon.className = 'fas fa-chevron-up'; }
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
 
   // var copy = document.querySelector(".BrandingLogosSlisde").cloneNode(true);
   //     document.querySelector(".BrandingLogos").appendChild(copy);
