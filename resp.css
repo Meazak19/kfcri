@@ -84,9 +84,7 @@
   .about-row { flex-direction:column; }
   .about-quote-box { position:static; margin-top:20px; animation:none; }
   .lawyer-cta-inner { flex-direction:column; }
-  .cta-img-col { min-height:300px; }
-  .cta-content-col::before { display:none; }
-  .cta-row { flex-direction:column; }
+  .cta-img-col { min-height:300px; } 
   .testi-statue-bg { display:none; }
   .testi-item-new.active { flex-direction:column; gap:28px; }
   .cta-banner-img { display:none; }
