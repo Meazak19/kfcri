@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFCRI - Pathway We Crossed (Corporate Style)</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #0a1d37;
+            --accent-gold: #b8860b;
+            --light-bg: #f8f9fa;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-navy);
+        }
+
+        .pathway-container {
+            padding: 100px 0;
+        }
+
+        /* Top Label Style from Image */
+        .sub-label {
+            display: inline-block;
+            background: #e9ecef;
+            color: var(--primary-navy);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 5px 15px;
+            border-left: 4px solid var(--accent-gold);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .main-title {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+
+        .content-para {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* Floating Info Box Style */
+        .info-card {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-left: 5px solid var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        /* Stats Bar Style from Image */
+        .stats-bar {
+            background: var(--primary-navy);
+            padding: 60px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ccc;
+        }
+
+        /* Image Mask from Screenshot */
+        .image-wrapper {
+            position: relative;
+            padding: 20px;
+        }
+
+        .image-mask {
+            border-radius: 100px 10px 100px 10px;
+            overflow: hidden;
+            box-shadow: 20px 20px 0 var(--light-bg);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 140px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .experience-badge h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .experience-badge span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<section class="pathway-container">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <!-- Content Column -->
+            <div class="col-lg-6 order-2 order-lg-1">
+                <span class="sub-label">Pathway We Crossed</span>
+                <h2 class="main-title">Advancing Global Conflict Resolution since 2016</h2>
+                
+                <p class="content-para">
+                    Kovise Foundation Conflict Resolution International (KFCRI) is a pioneering institution dedicated to advancing Alternative Dispute Resolution (ADR) globally. Founded by Mrs. Surya Narmada, KFCRI serves as an inclusive platform for sectors like agriculture, often underserved in traditional legal frameworks.
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5>Global Leadership</h5>
+                            <p class="small text-muted">Guided by Mr. V. Inbavijayan, bringing 20+ years of arbitration expertise.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5>Diversity First</h5>
+                            <p class="small text-muted">A strong focus on appointing young and women arbitrators globally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="content-para mt-3">
+                    As an appointing authority, KFCRI maintains a sector-wise panel of experts and remains resilient through innovation, including the introduction of Virtual Dispute Resolution (VDR) rules during the pandemic.
+                </p>
+            </div>
+
+            <!-- Image Column -->
+            <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0">
+                <div class="image-wrapper">
+                    <div class="image-mask">
+                        <img src="https://images.unsplash.com/photo-1573164060897-425941c30242?auto=format&fit=crop&q=80&w=800" alt="ADR Professionals" class="img-fluid">
+                    </div>
+                    <div class="experience-badge">
+                        <h2>10+</h2>
+                        <span>Years of<br>Excellence</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar (Dark Section) -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-6 mb-4 mb-md-0 stat-item">
+                <h3>40+</h3>
+                <p>Training Programs</p>
+            </div>
+            <div class="col-md-2 col-6 mb-4 mb-md-0 stat-item">
+                <h3>100+</h3>
+                <p>Seminars & Conferences</p>
+            </div>
+            <div class="col-md-2 col-6 mb-4 mb-md-0 stat-item">
+                <h3>200+</h3>
+                <p>Professionals Accredited</p>
+            </div>
+            <div class="col-md-2 col-6 mb-4 mb-md-0 stat-item">
+                <h3>25+</h3>
+                <p>Global MoUs</p>
+            </div>
+            <div class="col-md-2 col-6 mb-4 mb-md-0 stat-item">
+                <h3>150+</h3>
+                <p>Interns Trained</p>
+            </div>
+            <div class="col-md-2 col-6 mb-4 mb-md-0 stat-item">
+                <h3>120+</h3>
+                <p>Tribunal Cases</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footnote for 2025 Event -->
+<div class="container py-5 text-center">
+    <h4 style="color: var(--accent-gold);">Upcoming: Global South ADR Thirunaal 2025</h4>
+    <p class="text-muted">A 24-hour online global event uniting ADR practitioners across the Global South.</p>
+</div>
+
+</body>
+</html>
