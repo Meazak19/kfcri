@@ -1058,7 +1058,7 @@ right: 0;
  background: #ffffff;
  position: relative; 
  z-index: 1;}
-.blog-meta { display:flex; gap:20px; margin-bottom:12px; font-size:13px; }
+.blog-meta { display:flex; margin-bottom:12px; font-size:13px; }
 .blog-cat a { color:var(--primary); font-weight:700; text-transform:uppercase; letter-spacing:1px; font-size:12px; }
 .blog-card .overlays {
  position: absolute;
@@ -3394,3 +3394,61 @@ input[type=checkbox], input[type=radio] {
     text-align: justify;
     line-height: 1.8;
     }
+
+    .innerBlog .personImgTop{
+          background: #f9f9f9;
+    }
+    .innerBlog .personImgTop img{
+              max-height: 500px;
+              height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0 50px 50px 0;
+        object-position: top left;
+    }
+    .innerBlog .personTopGrid{
+             grid-template-columns: 1fr 1fr;
+    }
+    .arbitForm .section-title {
+      /* font-size: 22px; */
+    }
+    .arbitForm .bottomLine {
+          border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+    }
+   .arbitForm  .radio-group {
+          display: flex;
+    gap: 20px;
+    align-items: center;
+    }
+   .arbitForm  .radio-pill {
+          display: flex;
+    justify-content: center;
+    gap: 5px;
+    }
+
+    .legal-rep-block {
+    border: 1px dashed #9cbfdf;
+    background: #fafbfc;
+    border-radius: 4px;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    display: grid;
+}
+.legal-rep-block .legal-title {
+    color: #6b7280;
+    grid-column: 1 / -1;
+    margin-bottom: -4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.cea-button-link.arbBtn {
+       padding: 4px 14px 4px 40px;
+    border-radius: 10px 0 10px 0;
+}
+.cea-button-link.arbBtn .cea-button-icon {
+  width: 30px;
+      font-size: 12px;
+}

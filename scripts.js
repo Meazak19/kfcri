@@ -676,3 +676,23 @@ $(document).ready(function () {
   });
 
 });
+
+// ── Date Picker ────────────────────────────────────────────────
+flatpickr("#dateRequest", {
+  dateFormat: "d-m-Y", 
+  allowInput: true,
+  disableMobile: true,
+  onChange: function(selectedDates) {
+    if (selectedDates.length > 0) {
+      document.getElementById("dateRequest").classList.remove("is-invalid");
+      document.getElementById("dateRequest").classList.add("is-valid");
+      hideError("dateRequest", "dateError");
+    }
+  }
+});
+
+// ── Close Success ───────────────────────────────────────────────
+function closeSuccess() {
+  document.getElementById("successOverlay").classList.remove("show");
+  document.getElementById("resetBtn").click();
+}
