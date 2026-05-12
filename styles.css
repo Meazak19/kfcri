@@ -267,10 +267,17 @@ p { margin-bottom:1rem; }
  display:flex; align-items:center;
  justify-content:space-between; gap:20px;
 }
-.topbar-inner i { color:var(--primary); margin-right:5px; }
+.topbar-inner i { color:var(--primary); margin-right:5px; } 
 .topbar-inner a, .topbar-inner address { color:var(--white); }
 .topbar-inner a:hover { color:var(--primary); }
-
+.topbar-inner .social-icons a:hover i{
+  color: #fff;
+  transition: all 0.2s linear;
+}
+.topbar-inner .social-icons a:hover{ 
+  transition: all 0.2s linear;
+  transform: scale(0.9);
+}
 .header-navbar {
  background:transparent;
  border-bottom:1px solid rgba(255,255,255,.15);
@@ -1088,7 +1095,13 @@ right: 0;
  padding: 15px;
  text-align: center;
  box-shadow: 0 0px 30px rgb(59 138 211 / 70%); }
-.blog-title { font-size:20px; margin-bottom:18px; }
+.blog-title {     font-size: 18px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
 .blog-title a { color:var(--heading); }
 .blog-title a:hover { color:var(--primary); }
 .read-more {
@@ -1277,10 +1290,10 @@ right: 0;
 .mobile-close { background:none; border:none; font-size:22px; cursor:pointer; float:right; color:var(--heading); }
 .mobile-nav { margin-top:44px; }
 .mobile-nav li {  border-bottom: 1px solid #c2dbf1;
- font-size: 18px;
+ font-size: 16px;
  margin-bottom: 15px;}
  .mobile-nav li .fa-chevron-down{
-  font-size: 15px;
+  font-size: 11px;
  }
  .mobileTopLogo {
    width: 100px;
@@ -1327,7 +1340,7 @@ right: 0;
 }
 .m-sub li.m-open2 > .m-sub2 { display:block; }
 .m-sub2 li a {
- display:block; padding:9px 10px;
+ display:block; padding:7px 10px;
  color:var(--body-text); font-size:12px; font-weight:500;
  text-transform:uppercase; letter-spacing:.6px;
  border-bottom:1px solid #ede9e4;
@@ -1826,7 +1839,7 @@ right: 0;
 }
 .stats-section.aboutPage {
   /* background: #1c377c; */
-  overflow: visible;
+  overflow: hidden;
 }
 .aboutStat .stat-item{
   position: absolute;
@@ -3452,3 +3465,11 @@ input[type=checkbox], input[type=radio] {
   width: 30px;
       font-size: 12px;
 }
+.personTopGrid.two {
+      grid-template-columns: 2fr 1fr;
+      margin-top: 50px;
+}
+.personTopGrid.two .personImgTop img{
+         border-radius: 0px 0 50px;
+}
+ 

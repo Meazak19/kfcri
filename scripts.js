@@ -511,7 +511,7 @@ $(document).ready(function () {
         margin : 10
       },
       576: {
-        items  : 2,
+        items  : 1,
         margin : 15
       },
       768: {
@@ -536,14 +536,14 @@ $(document).ready(function () {
     autoplay        : false,
     autoplayTimeout : 4500,
     smartSpeed      : 1000,
-    items           : 2,
+    slideBy: 1,
     responsive      : {
       0: {
         items  : 1,
         margin : 10
       },
       576: {
-        items  : 2,
+        items  : 1,
         margin : 15
       },
       768: {
@@ -551,15 +551,19 @@ $(document).ready(function () {
         margin : 15
       },
       992: {
-        items  : 1,
+        items  : 2,
         margin : 20
       },
       1200: {
-        items  : 2,
+        items  : 3,
         margin : 25
       }
-    }
+    } 
   });
+});
+
+$(window).on('load', function () {
+  $('.newsSlider').trigger('refresh.owl.carousel');
 });
 
 
