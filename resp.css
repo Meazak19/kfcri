@@ -3,8 +3,26 @@
    ============================================= */
 
    @media (max-width:1499px) {
+    .team-section .team-name {
+        font-size: 18px;
+    }
+    .course-wrap .check-item span {
+    font-size: 14px;
+}
+    .primary-menu:after {
+            left: 15px;
+    }
+    .primary-menu {
+        padding-left: 30px;
+    }
     .primary-menu > li > a {
             padding: 0 10px;
+    }
+    .site-logo {
+        max-width: 50px;
+    }
+    .cta-banner-content .cea-button-link {
+            padding: 10px 25px 10px 57px;
     }
     h2, .h2 {
         font-size: 38px;
@@ -46,6 +64,58 @@
    }
 
 @media (max-width:1199px) {
+    .form-card {
+        padding: 30px;
+    }
+
+    .rules-wrap .icon-shell {
+            width: 58px;
+    height: 58px;
+    min-width: 58px;
+        box-shadow: inset 0 1px 0 rgb(22 50 115 / 0%), 0 8px 18px rgb(52 149 233 / 35%);
+    font-size: 19px;
+
+    }
+    .rules-wrap .rule-card {
+        padding: 20px;
+    }
+    .rules-wrap .card-left {
+        gap: 10px;
+    }
+    .rules-wrap .card-text p {
+        font-size: 15px;
+    }
+    .mv-section .vision-text {
+    font-size: 15px;
+}
+.mv-section .card-title {
+    font-size: 30px;
+}
+.mv-section .mission-list li {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+    .section-title {
+        font-size: 28px;
+    }
+    .page-wrap .hero-icon {
+            width: 50px;
+    font-size: 30px; 
+    height: 50px;
+    border-radius: 10px;
+    }
+    .page-wrap .hero-title {
+        font-size: 25px;
+    }
+    .page-wrap .card-desc {
+        font-size: 15px;
+    }
+    .page-wrap .badge-pill {
+            border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 10px;
+    }
     .about-quote-box p {
         font-size: 18px;
     }
@@ -188,15 +258,93 @@
     .personBreifDetails h2 {
         font-size: 30px;
     }
+    .commonPara {
+    font-size: 16px;
+}
+.accProcess .step-icon {
+        width: 42px;
+    height: 42px;
+    border-radius: 7px;
+}
+.accProcess .cardNumber {
+    font-size: 30px;
+}
+.accProcess .step-card {
+        padding: 20px 5px 20px;
+}
+.course-wrap .info-box {
+        padding: 12px 10px;
+}
+.course-wrap .info-value {
+    font-size: 13px;
+    line-height: 1.5;
+}
+.course-wrap .note-box {
+        font-size: 13px;
+            padding: 12px 9px;
+}
+.course-wrap .cert-value {
+    font-size: 14px;
+}
+.course-wrap .fee-label {
+    font-size: 12px;
+}
+.course-wrap .section-title {
+    font-size: 16px;
+}
+.course-wrap .hero {
+        padding: 25px;
+    margin: 40px 0;
+}
 }
  
 @media (max-width: 991px) {
+    .applicationForm .section-title{
+        font-size: 23px;
+    }
+    .applicationForm .form-label {
+        font-size: 16px;
+    }
+    .terms-box p, .terms-box li {
+        font-size: 14px;
+    }
+    .rules-wrap .rule-meta {
+        font-size: 16px;
+    }
+    .course-wrap .hero-desc {
+        font-size: 15px;
+    }
+        .cta-banner-content .cea-button-link {
+        padding: 10px 20px 10px 46px;
+    }
+        .cta-banner-content {
+        padding: 40px 30px 40px 25px; 
+    }
+        .page-wrap .hero-icon {
+        width: 40px;
+        font-size: 20px;
+        height: 40px;
+        border-radius: 5px;
+    }
 
         .header-topbar {
         font-size: 12px;
     }
+    .page-wrap .card-title {
+        font-size: 16px;
+    }
     .h-phone {
         font-size: 12px;
+    }
+        .page-wrap .card-desc { 
+        line-height: 1.5;
+    }
+    .page-wrap .hero-banner {
+        padding: 25px;
+    }
+    .page-wrap .card-meta {
+        line-height: 1.5;
+        gap: 8px;
     }
           .primary-menu > li > a {
         padding: 0 3px;
@@ -208,9 +356,18 @@
     .navbar-inner .cea-button-link{
         display: none;
     }
-    .site-logo {
-    max-width: 50px;
+    .site-logo, .sticky-logo {
+    max-width: 40px;
 }
+    .primary-menu:after {
+        left: 7px;
+    }
+    .service-card.active .service-body {
+        max-height: 2000px;
+    }
+        .primary-menu {
+        padding-left: 12px;
+    }
 .slide-watermark, .slide-rock-shape {
     top: unset;
     bottom: 50px;
@@ -290,8 +447,23 @@
 .personTopGrid.two .personImgTop img {
     border-radius: 0px 0 20px;
 }
+.profileRow .profile-card p {
+        font-size: 15px;
+    line-height: 1.5;
+}
 .personImgTop img {
     border-radius: 20px 0 0;
+            width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+    .course-wrap .check-item span {
+        font-size: 13px;
+    }
+.profileRow .expertise-tag {
+    padding: 3px 9px;
+    border-radius: 10px;
+        font-size: 12px;
 }
     .personBreifDetails h2 {
         font-size: 25px;
@@ -384,16 +556,84 @@
     .service-header-text h5 {
         font-size: 17px;
     }
+    .service-content-col {
+            padding: 15px 10px;
+    }
+    .service-lead {
+            font-size: 16px;
+                margin-bottom: 10px;
+    }
+    .service-divider {
+        margin-bottom: 10px;
+    }
+    .service-desc {
+            font-size: 14px; 
+    line-height: 1.5;
+    }
+    .highlights-grid {
+        gap: 0 16px;
+            grid-template-columns: 1fr;
+    }
+    .service-stats-bar {
+        flex-direction: column;
+    }
+    .service-stat {
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            border-right: unset;
+                    padding: 10px 10px 2px;
+    }
+    .highlight-item {
+        font-size: 14px;
+    }
+    .accProcess .section-title {
+        font-size: 18px;
+    }
+    .accProcess .step-num br {
+        display: none;
+    }
 } 
 
 @media (max-width:767px) {
-
+.applicationForm .section-title br{
+    display: none;
+}
+    .service-icon-wrap {
+        display: none;
+    }
+    .service-header {
+            padding: 10px 12px;
+    }
+    .service-header-text {
+        padding-left: 0;
+    }
+    .service-stats-bar {
+        flex-direction: row;
+                padding: 10px;
+    } 
+    .service-inner {
+            grid-template-columns: 1fr;
+    }
+    .service-desc, .service-lead {
+        text-align: center;
+    }
+    .service-inner .service-content-col{
+        grid-row: 1;
+    }
+    .highlights-grid {
+        margin: auto;
+    }
+        .service-stat {
+        border-bottom: unset;
+        border-right: 1px solid rgba(255, 255, 255, .1); 
+    }
        .team-section .team-card {
                 margin-bottom: 40px;
             }
             
             .team-section .team-name {
-                font-size: 1.5rem;
+                       font-size: 17px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
             }
             
             .team-section .team-image-container {
@@ -675,9 +915,327 @@
     .personTopGrid {
                 border-radius: 10px 0;
     } 
+        .commonPara {
+        font-size: 15px;
+    } 
+        .accProcess .section-title {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+        .accProcess .step-num br {
+        display: block;
+    }
+    .accProcess .prog-icon {
+    width: 44px;
+    font-size: 18px;
+    height: 44px;
+    border-radius: 10px;
+    }
+    .accProcess .prog-desc {
+        font-size: 14px;
+    }
+    .accProcess .prog-title {
+        font-size: 18px;
+    }
+    .accProcess .prog-link {
+        font-size: 12px;
+    }
+    .course-wrap .hero-title {
+        font-size: 20px;
+    }
+        .course-wrap .hero-desc {
+        font-size: 14px;
+    }
+    .breadcrumb-wrap li {
+        font-size: 14px;
+    }
+        .course-wrap .check-item span {
+        font-size: 12px; 
+    }
+    .personBreifDetails .course-wrap span {
+        letter-spacing: 0;
+    }
+    .profileRow .section-header h5 {
+        font-size: 25px;
+    }
+    .profileRow .section-header {
+            padding: 12px 20px;
+    }
+    .profileRow .card-body-custom {
+    padding: 20px 15px 20px;
+}
+ .personBreifDetails p {
+                margin: 25px 0 5px;
+    }
+    .mv-section .icon-circle::after, .mv-section .vision-icon::after {
+            width: 100px;
+    height: 100px;
+    }
+    .mv-section .icon-circle, .mv-section .vision-icon {
+            width: 80px;
+    height: 80px;
+    }
+        .mv-section .card-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+        .rules-wrap .icon-shell {
+        width: 38px;
+        height: 38px;
+        min-width: 38px; 
+        font-size: 14px;
+    }
+    .rules-wrap .rule-meta {
+        gap: 5px;
+        margin-bottom: 0;
+    }
+        .rules-wrap .card-text p {
+        font-size: 14px;
+    }
+    .rules-wrap .open-pill {
+            gap: 5px;
+    border-radius: 10px;
+        font-size: 11px;
+    }
+        .rules-wrap .rule-card {
+        padding: 20px 10px;
+    }
+    .rules-wrap .rule-card-content {
+        gap: 10px;
+    }
+    .contactForm .sub-title {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+} 
+.contactFormRow p {
+    max-width: 400px;
+    font-size: 14px;
+}
 }
 
 @media (max-width:575px) { 
+
+    .legal-rep-block {
+           grid-template-columns: 1fr; 
+    }
+
+    .arbitForm .radio-group {
+        flex-wrap: wrap;
+    }
+
+    .contactFormRow p {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .mv-section .mission-list.responsibilites-list {
+    padding-left: 15px;
+}
+.contactForm .sub-title,.contactForm .section-title-wrapper{
+    text-align: center;
+}
+.contactForm  .section-divider {
+    margin-left: auto !important;
+}
+.dotCircle {
+    left: -10px;
+}
+.terms-box {
+    padding: 25px 15px;
+}
+    .terms-box p, .terms-box li {
+        font-size: 13px;
+    }
+.terms-box ol {
+    padding-left: 10px;
+}
+.form-check-label {
+    line-height: 1.5;
+}
+    .applicationForm .section-title {
+        font-size: 16px;
+    }
+    ::placeholder {
+        font-size: 12px;
+    }
+    .custom-file-label {
+        font-size: 12px !important;
+    }
+        .form-card {
+        padding: 30px 12px;
+    }
+   
+    .personBreifDetails .course-wrap span {
+        text-align: left;
+    }
+        .team-section .team-card {
+        margin: auto;
+        margin-bottom: 0px;
+        max-width: 350px;
+    }
+    .responsibilites .svc-card-top {
+        text-align: center;
+    }
+    .profileRow .profile-card p {
+        font-size: 14px;
+    }
+    .course-wrap .label-tag {
+        text-align: center;
+    }
+    .profileRow .section-header {
+        justify-content: center;
+    }
+    .profileRow .expertise-tags {
+        justify-content: center;
+    }
+        .profileRow .section-header h5 {
+        font-size: 22px;
+    }
+    .profileRow .card-body-custom {
+        text-align: center;
+    }
+    .breadcrumb-wrap ul {
+            gap: 10px;
+        flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    }
+        .rules-wrap .rule-card {
+        padding: 20px 15px;
+        max-width: 350px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .rules-wrap .open-pill {
+        margin-right: auto;
+    }
+    .rules-wrap .icon-shell {
+        display: none;
+    }
+    .rules-wrap .rule-card-content {
+        flex-direction: column;
+    }
+    .rules-wrap .card-left {
+        text-align: center;
+        justify-content: center;
+    }
+        .breadcrumb-wrap li {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .course-wrap .hero-icon {
+         width: 30px;
+        height: 30px;
+        font-size: 15px;
+                border-radius: 4px;
+        position: absolute;
+        top: 30px;
+    }
+    .course-wrap .hero {
+                padding: 25px 15px;
+                        margin: 30px 0;
+                        text-align: center;
+                        position: relative;
+    }
+        .course-wrap .hero-desc {
+        font-size: 13px;
+    }
+        .course-wrap .hero-title {
+        font-size: 16px;
+    }
+    .course-wrap .hero-desig {
+        font-size: 12px;
+    }
+    .course-wrap .hero-top {
+           gap: 10px;
+    margin-bottom: 15px; 
+    display: block;
+    }
+        .course-wrap .check-item span {
+        font-size: 13px; 
+    }
+    .course-wrap .info-grid {
+        text-align: center;
+            grid-template-columns: 1fr;
+                    max-width: 350px;
+        margin: auto;
+    }
+    .course-wrap .section-header {
+            justify-content: space-between;
+    flex-direction: row-reverse;
+    }
+    .commonPara {
+        font-size: 14px;
+    } 
+   .cta-banner-content .cea-button-icon {
+    width: 32px;
+   }
+       .cta-banner-content .cea-button-link {
+        padding: 5px 6px 5px 35px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+    .course-wrap .fee-grid {
+            grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 350px;
+        margin: auto;
+    }
+        .course-wrap .cert-value {
+        font-size: 13px;
+    }
+    .course-wrap .fee-label {
+        justify-content: center;
+    }
+    .accProcess .prog-card.arb {
+            text-align: center;
+    max-width: 350px;
+    margin: auto;
+    }
+    .course-wrap .info-box.full {
+        max-width: 100% !important;
+    }
+    .course-wrap .info-label {
+        justify-content: center;
+    }
+    .shadeBlur {
+            width: 50px;
+    height: 50px;
+    }
+    .accProcess .prog-icon.arb {
+        margin: auto;
+            margin-bottom: 20px;
+    }
+    .accProcess .prog-link {
+        justify-content: center;
+    }
+        .accProcess .step-card {
+        padding: 20px 25px 20px;
+        max-width: 350px;
+        margin: auto;
+    }
+    .accProcess .step-num strong {
+        font-size: 16px;
+    }
+        .accProcess .step-num br {
+        display: none;
+    }
+        .accProcess .section-title {
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .service-lead {
+        font-size: 14px;
+    }
+    .accProcess .step-desc {
+        font-size: 14px;
+    }
+
+.service-stat .stat-val {
+    font-size: 13px;
+}
+    .service-header-text {
+        padding-left: 10px;
+    }
 
         .slide-content {
         left: 0;
@@ -723,12 +1281,40 @@
                 font-size: 16px;
         letter-spacing: 0;
                 margin-bottom: 10px;
+                line-height: 1.8;
     }
     .aboutQoteParent {
         gap: 10px;
     }
+        .mv-section .icon-circle::after, .mv-section .vision-icon::after {
+        width: 80px;
+        height: 80px;
+        border-width: 1px;
+    }
    .aboutQoteParent .about-quote-box {
         border-radius: 0;
+    }
+    .mv-section .mission-card, .mv-section .vision-card {
+        padding: 40px 10px 10px;
+    }
+    .mv-section .card-title {
+        margin-bottom: 10px;
+    }
+    .mv-section .vissionimgOne {
+        height: 300px;
+    }
+        .mv-section .vision-text {
+        font-size: 14px;
+    }
+    .mv-section .mission-list li {
+        font-size: 14px;
+    }
+        .mv-section .icon-circle, .mv-section .vision-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .mv-section .icon-circle i {
+        font-size: 30px;
     }
    .aboutQoteParent .about-quote-box p{
         border-radius: 0;
@@ -941,7 +1527,7 @@
         display: none;
     }
     .service-header {
-            gap: 14px;
+            gap: 10px;
             padding: 10px 10px 10px 5px;
     }
     .service-toggle {
@@ -951,9 +1537,11 @@
     }
     .services-wrap {
         padding: 0;
+            margin: 48px auto 0px;
     }
         .service-header-text p {
-        font-size: 13px;
+        font-size: 14px;
+        padding-top: 5px;
     }
     .service-card .fa-chevron-down {
         font-size: 10px;
@@ -982,6 +1570,52 @@
     }
     .personTopGrid.two {
             grid-template-columns: 1fr;
+    }
+    .service-stats-bar {
+                padding: 10px 0px;
+    }
+    .service-stat {
+                padding: 10px 5px 2px;
+    }
+        .page-wrap .hero-banner {
+        padding: 15px 10px;
+        border-radius: 10px;
+        gap: 15px;
+    }
+        .page-wrap .hero-title {
+        font-size: 18px;
+    }
+    .page-wrap .hero-sub {
+        font-size: 14px;
+    }
+    .page-wrap .hero-icon {
+        width: 35px;
+        font-size: 15px;
+        height: 35px;
+        border-radius: 5px;
+    }
+        .page-wrap .card-desc {
+        font-size: 14px;
+    }
+        .page-wrap .card-title {
+        font-size: 15px;
+    }
+    .page-wrap .badge-pill {
+            top: -3px;
+    right: -12px;
+    }
+    .page-wrap .card-meta {
+        font-size: 12px;
+    }
+    .page-wrap .view-link {
+        font-size: 13px;
+    }
+    .page-wrap .card-body-inner {
+            padding: 20px 15px;
+    }
+    .page-wrap .btn-prev, .course-wrap .btn-prev {
+            padding: 8px 14px;
+    font-size: 14px;
     }
 }
 
