@@ -911,8 +911,7 @@ right: 0;
  flex: 0 0 calc((100% - 60px) / 3); /* exactly 3 per row */
  min-width: 0;
  background: var(--white);
- border: 1px solid #2980cf21;
- cursor: pointer;
+ border: 1px solid #2980cf21; 
  transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
 }
  
